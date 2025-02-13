@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/login"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:layout_alignBottom="@+id/edituname"
+        android:gravity="center"
+        android:id="@+id/uname"
+        android:layout_below="@+id/login"/>
+
+    <EditText
+        android:id="@+id/edituname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_toEndOf="@+id/uname"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pwd"
+        android:layout_below="@+id/uname"
+        android:text="@string/password"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editPwd"
+        android:layout_toEndOf="@+id/pwd"
+        android:drawableEnd="@drawable/ic_password"
+        android:layout_below="@+id/edituname"
+        android:layout_alignParentEnd="true"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:layout_below="@+id/editPwd"
+        android:layout_centerInParent="true"
+        android:text="@string/login"
+        android:layout_marginTop="10dp"/>
+
+
+</RelativeLayout>
