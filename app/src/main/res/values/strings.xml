@@ -5,5 +5,19 @@
     <string name="login">Login\n</string>
     <string name="password">Password</string>
     <string name="errorText">The field is required!!</string>
+    <string name="enter_your_uername">username</string>
+    <string name="enter_your_username">Username</string>
+
+    <!--Creating string array-->
+    <string-array name="countries">
+        <item>Nepal</item>
+        <item>USA</item>
+        <item>Canada</item>
+        <item>Japan</item>
+        <item>India</item>
+        <item>Russia</item>
+        <item>UK</item>
+        <item>China</item>
+    </string-array>
 
 </resources>

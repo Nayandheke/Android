@@ -2,7 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/gradient_background"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_password"
+        android:padding="10dp"
+        android:background="@drawable/circle_background"
+        android:layout_above="@id/login"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -19,6 +31,7 @@
         android:text="@string/username"
         android:layout_alignBottom="@+id/edituname"
         android:gravity="center"
+        android:layout_alignTop="@id/edituname"
         android:id="@+id/uname"
         android:layout_below="@+id/login"/>
 
@@ -27,7 +40,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/login"
+        android:hint="@string/enter_your_username"
+        android:textColorHint="@color/white"
+        android:background="@drawable/edit_background"
         android:layout_toEndOf="@+id/uname"
+        android:layout_margin="10dp"
         android:layout_alignParentEnd="true"/>
 
     <TextView
@@ -35,6 +52,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/pwd"
         android:layout_below="@+id/uname"
+        android:paddingTop="10dp"
+        android:layout_alignBottom="@id/editPwd"
+        android:layout_alignTop="@id/editPwd"
         android:text="@string/password"/>
 
     <EditText
@@ -42,8 +62,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/editPwd"
         android:layout_toEndOf="@+id/pwd"
+        android:background="@drawable/edit_background"
         android:drawableEnd="@drawable/ic_password"
         android:layout_below="@+id/edituname"
+        android:hint="@string/password"
+        android:textColorHint="@color/white"
+        android:layout_margin="10dp"
         android:layout_alignParentEnd="true"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -54,6 +78,13 @@
         android:layout_centerInParent="true"
         android:text="@string/login"
         android:layout_marginTop="10dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:id="@+id/spinner"
+        android:layout_margin="20dp"
+        android:layout_below="@id/btnLogin"
+        android:layout_height="wrap_content"/>
 
 
 </RelativeLayout>
