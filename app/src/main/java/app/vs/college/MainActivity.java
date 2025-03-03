@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox checkBox;
     private RadioGroup radioGroup;
 
-    private Spinner spinner;
+    private Spinner userdataSpinner, spinner;
+
+//    private DBConnect dbConnect;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -94,12 +96,16 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0;i<10;i++) {
             userDataList.add(new UserData("name"+i,"email"+i,i,i));
         }
+        userdataSpinner = findViewById(R.id.users);
+        CustomArrayAdapter adapter = new CustomArrayAdapter(this, userDataList);
+        userdataSpinner.setAdapter(adapter);
+
 /*        ArrayAdapter<UserData> userDataArrayAdapter = new ArrayAdapter<>(this,
                 androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,
                 userDataList);*/
 
-        CustomArrayAdapter adapter = new CustomArrayAdapter(this,userDataList);
-        spinner.setAdapter(adapter);
+//        CustomArrayAdapter adapter = new CustomArrayAdapter(this,userDataList);
+//        spinner.setAdapter(adapter);
 
 
 
@@ -128,12 +134,18 @@ public class MainActivity extends AppCompatActivity {
             Log.i("LoginInfo", uName +" "+ pwd);
             Toast.makeText(this,uName +" "+ pwd,Toast.LENGTH_SHORT).show();
             Snackbar.make(login,uName + " " + pwd,Snackbar.LENGTH_SHORT).show();
-
+//            dbConnect.insertData(new UserData(uName, "help@he"));
             Intent intent = new Intent(this, ListViewActivity.class);
             intent.putExtra("username", uName);
             intent.putExtra("password", pwd);
             intent.putExtra("phone", 982736);
             startActivity(intent);
+
+            Intent gridIntent = new Intent(this, ListViewActivity.class);
+            gridIntent.putExtra("userName", uName);
+            gridIntent.putExtra("password", pwd);
+            gridIntent.putExtra("phone", 982736);
+            startActivity(gridIntent);
         }
     }
 }

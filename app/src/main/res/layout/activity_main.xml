@@ -7,8 +7,19 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/gradient_background"
     android:padding="16dp"
     tools:context="MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_password"
+        android:padding="10dp"
+        android:background="@drawable/circle_background"
+        android:layout_above="@id/login"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,12 +37,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/username"
+            android:layout_marginTop="10dp"
             android:textSize="16sp" />
 
         <EditText
             android:id="@+id/editUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/enter_your_username"
+            android:textColorHint="@color/white"
+            android:background="@drawable/edit_background"
             android:inputType="textEmailAddress"
             android:padding="10dp" />
     </LinearLayout>
@@ -45,12 +61,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/password"
+            android:layout_marginTop="10dp"
             android:textSize="16sp" />
 
         <EditText
             android:id="@+id/editPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/edit_background"
+            android:drawableEnd="@drawable/ic_password"
+            android:hint="@string/password"
+            android:layout_margin="10dp"
+            android:textColorHint="@color/white"
             android:inputType="textPassword"
             android:padding="10dp" />
     </LinearLayout>
@@ -95,13 +117,18 @@
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="loginUser"
-        android:text="@string/login"/>
+        android:text="@string/login"
+        />
 
     <Spinner
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/spinner"
-        android:layout_margin="20dp"
-        android:layout_below="@id/btnLogin"
-        android:layout_height="wrap_content"/>
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/users"
+        />
 </LinearLayout>

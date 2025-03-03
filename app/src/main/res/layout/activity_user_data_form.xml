@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".UserDataForm">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:hint="Enter your name"
+        android:background="@drawable/edit_background"
+        android:textColorHint="@color/white"
+        android:padding="10dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editEmail"
+        android:textColorHint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:hint="Enter your email"
+        android:background="@drawable/edit_background"
+        android:padding="10dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editHeight"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:hint="Enter your height"
+        android:background="@drawable/edit_background"
+        android:padding="10dp"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_marginTop="10dp"
+        android:onClick="insertData"
+        android:text="Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
